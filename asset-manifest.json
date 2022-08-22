@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-facebook-clone/static/css/main.f9773e99.css",
+    "main.js": "/react-facebook-clone/static/js/main.28dbff47.js",
+    "static/js/787.060b83f1.chunk.js": "/react-facebook-clone/static/js/787.060b83f1.chunk.js",
+    "static/media/v1.mp4": "/react-facebook-clone/static/media/v1.2f00531719528e12fb08.mp4",
+    "static/media/v2.mp4": "/react-facebook-clone/static/media/v2.b09d9a00371975163692.mp4",
+    "static/media/ph2.jpg": "/react-facebook-clone/static/media/ph2.1be506b1d26ed82d9cb9.jpg",
+    "static/media/pi.png": "/react-facebook-clone/static/media/pi.71af6d24a85e4ba7e9a8.png",
+    "static/media/ph5.jpg": "/react-facebook-clone/static/media/ph5.7a9dfecf230d4909bd4e.jpg",
+    "static/media/ph6.png": "/react-facebook-clone/static/media/ph6.2ba2c4a3ffff4bee2911.png",
+    "static/media/vi.png": "/react-facebook-clone/static/media/vi.1cb2c7814d21b3b7f208.png",
+    "index.html": "/react-facebook-clone/index.html",
+    "main.f9773e99.css.map": "/react-facebook-clone/static/css/main.f9773e99.css.map",
+    "main.28dbff47.js.map": "/react-facebook-clone/static/js/main.28dbff47.js.map",
+    "787.060b83f1.chunk.js.map": "/react-facebook-clone/static/js/787.060b83f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9773e99.css",
+    "static/js/main.28dbff47.js"
+  ]
+}
