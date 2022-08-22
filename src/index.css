@@ -1,13 +1,127 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  direction:rtl;
+  background-color: #f0f2f5 !important;
+  position: relative;
 }
+.navbar{
+  box-shadow: 1px 1px 2px gray;
+}
+input {
+  outline: 0 !important;
+
+}
+.textarea{
+  outline: 0 !important;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none !important;
+}
+.input-rounded-circle {
+  border-radius: 20px;
+  background-color: #f0f2f5;
+}
+.input-rounded-circle input {
+  background-color: #f0f2f5;
+}
+.link-sidbar:hover{
+  background-color: #cbccce;
+  border-radius: 10px;
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev ::after{
+
+  background-color: white !important;
+}
+
+.modals{
+position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0; 
+
+  z-index: 9999;
+} 
+.modal-contents{
+width: 100%;
+height: 100%;
+background-color: rgba(238, 240, 243, 0.8);
+display: flex;
+justify-content: center;
+
+align-items: center;
+z-index: 99099;
+
+}
+
+.swiper-button-prev{
+  background-color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.swiper-button-prev::after{
+  content: '<' !important;
+}
+
+.swiper-button-next{
+  background-color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+ justify-self: end;
+}
+
+.swiper-button-next::after{
+  content: '>' !important;
+}
+
+.sidbarfrend{
+  background-color: #ffffff;
+  min-height: calc(100vh - 65px);
+}
+
