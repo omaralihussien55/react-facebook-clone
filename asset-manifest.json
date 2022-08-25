@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-facebook-clone/static/css/main.2e168497.css",
+    "main.css": "/react-facebook-clone/static/css/main.f765d3c5.css",
     "main.js": "/react-facebook-clone/static/js/main.887005fa.js",
     "static/js/787.060b83f1.chunk.js": "/react-facebook-clone/static/js/787.060b83f1.chunk.js",
     "static/media/v1.mp4": "/react-facebook-clone/static/media/v1.2f00531719528e12fb08.mp4",
@@ -11,12 +11,12 @@
     "static/media/ph6.png": "/react-facebook-clone/static/media/ph6.2ba2c4a3ffff4bee2911.png",
     "static/media/vi.png": "/react-facebook-clone/static/media/vi.1cb2c7814d21b3b7f208.png",
     "index.html": "/react-facebook-clone/index.html",
-    "main.2e168497.css.map": "/react-facebook-clone/static/css/main.2e168497.css.map",
+    "main.f765d3c5.css.map": "/react-facebook-clone/static/css/main.f765d3c5.css.map",
     "main.887005fa.js.map": "/react-facebook-clone/static/js/main.887005fa.js.map",
     "787.060b83f1.chunk.js.map": "/react-facebook-clone/static/js/787.060b83f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e168497.css",
+    "static/css/main.f765d3c5.css",
     "static/js/main.887005fa.js"
   ]
 }
