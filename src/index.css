@@ -11,6 +11,10 @@ body{
 }
 .navbar{
   box-shadow: 1px 1px 2px gray;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 input {
   outline: 0 !important;
