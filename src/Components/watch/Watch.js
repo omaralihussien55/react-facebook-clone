@@ -6,11 +6,11 @@ import SidebarWatch from './SidebarWatch'
 
 const Watch = () => {
   return (
-    <div className='d-flex'>
-    <div className='col-6  col-md-4 '>
+    <div className='d-flex flex-column flex-md-row'>
+    <div className='col-12   col-md-4 mx-auto mb-3'>
         <SidebarWatch/>
     </div>
-    <div className='col-6 col-md-8 '>
+    <div className='col-12  col-md-8 mx-auto '>
      <IndexWatch/>
     </div>
     </div>

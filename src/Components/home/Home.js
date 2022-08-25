@@ -9,7 +9,7 @@ const HomeApp = () => {
   return (
     <div className='d-flex p-2 mt-2'>
   
-     <Sidebar/>
+     <Sidebar display={"none"}/>
      <Main/>
      <Tabbar/>
     </div>

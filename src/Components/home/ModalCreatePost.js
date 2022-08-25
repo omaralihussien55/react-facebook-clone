@@ -8,7 +8,7 @@ import { imgperson } from '../../data/data';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 const ModalCreatePost = ({setShow}) => {
   return (
-    <div  className='col-4 bg-white p-2'>
+    <div  className='col-11 col-md-7  col-lg-5 bg-white p-2 mx-auto'>
     <div className='text-center p-3  mb-2 border-bottom position-relative'>
                        إنشاء منشور
              <div className='position-absolute' style={{top:"5px",left:"10px"}}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link,useNavigate } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
@@ -15,27 +15,42 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import face from  '../img/face.png'
 import { imgperson } from '../data/data';
-const Navbar = () => {
+import { IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+const Navbar = ({setShowMenu,showMenu}) => {
   const [value, setValue] = React.useState('/');
  const navigate = useNavigate()
   const handleChange = (event, newValue) => {
     setValue(newValue);
     navigate(newValue)
   };
+
+  useEffect(()=>{
+navigate('/')
+  },[])
   return (
 <div className='bg-white d-flex p-1 navbar mb-4'>
 <div className='col-md-3 d-flex justify-content-around d-none d-md-flex'>
 
   <div><Avatar alt="Remy Sharp" src={`${face}`} /></div>
-  <div className='input-parent border p-1 input-rounded-circle' >
+  <div className='input-parent d-flex border p-1 input-rounded-circle' >
   <span className='mx-1'><SearchIcon/></span>
-  <input type={'text'} className="border-0"  placeholder="بحث فى فيسبوك"/>
+  <input type={'text'} className="border-0 col "  placeholder="بحث فى فيسبوك"/>
   </div>
  
 </div>
+<div className='d-flex d-md-none col'>
+<IconButton onClick={()=>setShowMenu(!showMenu)}>
+<MenuIcon/>
 
-<div className='col-md-6'>
-     <BottomNavigation  value={value} onChange={handleChange}>
+</IconButton>
+<div className='input-parent border d-flex  p-1 input-rounded-circle col' >
+<span className='mx-1'><SearchIcon/></span>
+<input type={'text'} className="border-0 col"  placeholder="بحث فى فيسبوك"/>
+</div>
+</div>
+<div className='col-12 col-md-6' onClick={()=> setShowMenu(false)}>
+     <BottomNavigation className='col-12' value={value} onChange={handleChange}>
      <BottomNavigationAction
        label={''}
        value="/"

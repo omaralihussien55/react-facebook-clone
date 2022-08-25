@@ -45,12 +45,12 @@ export default function IndexWatch() {
   };
 
   return (
-   <div className='col-10 mx-auto'>
+   <div className='col-12 col-md-11  col-lg-10 mx-auto'>
    {
     watch.map((i,idx)=>{
         return(
              
-             <Card key={idx} className="mb-3">
+             <Card key={idx} className="mb-3 w-100">
              <CardHeader
                avatar={
                  <Avatar src={fa1} >

@@ -18,7 +18,7 @@ const Think = () => {
   
   return (
     <div  className='mb-3 p-2 bg-white border'>
-    {show && <Modals> <ModalCreatePost setShow={setShow} /> </Modals>}
+    {show && <Modals align={"align-items-center"}> <ModalCreatePost setShow={setShow} /> </Modals>}
     <div className=' d-flex  '>
          <div><Avatar alt="Remy Sharp" src={imgperson} /></div>
                <div className='input-parent border col mx-2 p-1 input-rounded-circle' >

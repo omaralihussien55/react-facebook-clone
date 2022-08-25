@@ -15,6 +15,9 @@ import AddIcon from '@mui/icons-material/Add';
 import { reliz, story } from '../../data/data';
 
 import { imgperson } from '../../data/data';
+import { arr } from './Tabbar';
+import { blueGrey } from '@mui/material/colors';
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -119,10 +122,12 @@ export default function TabMain() {
              <div className='position-relative' >
           <SwipeApp>
                 {
-                  reliz.map((i,idx)=>{
+                  arr.map((i,idx)=>{
                       return(
-                          <SwiperSlide className='position-relative w-25 mx-1' key={idx}>
-                          <img src={`${i.img}`}  height={150}/>
+                          <SwiperSlide style={{height:"180px"}} className='position-relative w-25 mx-1' key={idx}>
+                           <div className='w-100 h-100'>
+                           <img src={`${i.img}`}  className="h-100 w-100"/>
+                           </div>
                         
                          </SwiperSlide>
                       )
@@ -132,30 +137,41 @@ export default function TabMain() {
 
         </div>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel value={value} index={2} dir={theme.direction} >
         <div className='position-relative' >
         <SwipeApp>
+
               {
-                reliz.map((i,idx)=>{
+                arr.map((i,idx)=>{
                     return(
-                        <SwiperSlide   className='position-relative w-50 mx-1 border p-2' key={idx}>
-                          <Stack className='w-100' style={{height:"160px"}}>
-                              <div className='m-auto text-center d-flex flex-column w-100'>
-                                   <Avatar src={`${i.img}`} className="m-auto"/>
-                                   <h5 className='mt-3'>ahmed</h5>
-                              </div>
-                              <Button variant="outlined" color='primary'>ترحيب</Button>
-                          </Stack>
-                      
+                        <SwiperSlide style={{height:"180px"}} className='position-relative bg-info w-25 mx-1' key={idx}>
+                        
+                          <img src={`${i.img}`} className="rounded h-100"  />
+                       
+                          <div   className='position-absolute w-100 h-100 d-flex flex-column p-2' style={{top:"0",right:"0"}} >
+                             <h6 className='text-white'>{i.name}</h6>
+                               <Button variant='contained' sx={{width:"100%",margin:"auto"}}>ترحيب</Button>
+                          </div>
+                        
                        </SwiperSlide>
                     )
                 })
               }
+      
         </SwipeApp>
 
       </div>
+        
         </TabPanel>
       </SwipeableViews>
     </Box>
   );
 }
+
+// <div className='w-100 h-100' >
+// <div className='m-auto text-center d-flex flex-column w-100'>
+//      <Avatar src={`${i.imgstory}`} sx={{width:60,height:60}} className="m-auto"/>
+//      <h5 className='mt-3'>ahmed</h5>
+// </div>
+// <Button sx={{width:'100%'}}   variant="outlined" color='primary'>ترحيب</Button>
+// </div>
