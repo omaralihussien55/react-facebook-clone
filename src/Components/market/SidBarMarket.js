@@ -14,7 +14,7 @@ const SidBarMarket = () => {
   return (
     <div className='sidbarfrend'>
     <div className='d-flex justify-content-between align-items-center p-2 mb-2'>
-    <div><h4>Watch</h4></div>
+    <div><h4>Marketplace</h4></div>
     <div className=''>
       <Avatar>
         <IconButton>

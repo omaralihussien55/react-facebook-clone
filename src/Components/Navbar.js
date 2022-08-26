@@ -17,7 +17,7 @@ import face from  '../img/face.png'
 import { imgperson } from '../data/data';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-const Navbar = ({setShowMenu,showMenu}) => {
+const Navbar = ({setShowMenu,showMenu,RefNav}) => {
   const [value, setValue] = React.useState('/');
  const navigate = useNavigate()
   const handleChange = (event, newValue) => {
@@ -29,7 +29,7 @@ const Navbar = ({setShowMenu,showMenu}) => {
 navigate('/')
   },[])
   return (
-<div className='bg-white d-flex p-1 navbar mb-4'>
+<div ref={RefNav} className='bg-white d-flex p-1 navbar mb-4'>
 <div className='col-md-3 d-flex justify-content-around d-none d-md-flex'>
 
   <div><Avatar alt="Remy Sharp" src={`${face}`} /></div>

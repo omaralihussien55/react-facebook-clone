@@ -5,8 +5,8 @@ import TabMain from './TabMain'
 import Think from './Think'
 const Main = () => {
   return (
-    <div className='col-md-6'>
-    <div className='col-11'>
+    <div className='col-12 col-md-6'>
+    <div className='col-11 mx-auto'>
     <TabMain/>
     <Think/>
     <Posts/>

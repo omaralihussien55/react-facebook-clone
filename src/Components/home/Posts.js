@@ -4,18 +4,19 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
-
+import Tooltip from '@mui/material/Tooltip';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-
 import Button from '@mui/material/Button';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
+import Emojy from './Emojy';
 import { Emogy, post } from '../../data/data';
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -28,16 +29,41 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function Posts() {
+  const [arry ,setArry] = React.useState(post)
   const [expanded, setExpanded] = React.useState(false);
-
+  const [like , setLike ]= React.useState(Emogy[0])
+  const [showLike,setShowLike] = React.useState(false)
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  const ChangeLike = (id)=>{
+
+let findLike = Emogy.find((i)=>{
+  return  i.id== id
+})
+setLike(findLike)
+  }
+
+
+  const ChangePostLike= (id)=>{
+   let item = post.map((i)=>{
+      if(i.id == id){
+         i.emo = true
+       
+         return i
+      }else{
+        return i
+      }
+    })
+
+    setArry(item)
+  }
+
   return (
    <div>
    {
-    post.map((i,idx)=>{
+    arry.map((i,idx)=>{
         return(
              
              <Card key={idx} className="mb-3">
@@ -92,12 +118,12 @@ export default function Posts() {
 
               
 <div className='d-flex justify-content-around align-items-center p-1 mb-1'>
-          
-      <Button variant="text" size="medium" style={{color:"black"}} >
-      <ThumbUpOffAltIcon/>
-      <span className='mx-1'>اعجبنى</span>
+    <Tooltip  title={<Emojy ChangeLike={ChangeLike}/>} arrow>
+      <Button variant="text" size="medium" style={{color:"black"}} onClick={()=> ChangePostLike(i.id)} >
+     {i.emo ? <img src={like.img} width={20} height={20}/> :<ThumbUpOffAltIcon/>}
+      <span className='mx-1 font-weight-bolder' style={{color:i.emo&&like.color,fontSize:'14px'}}>{i.emo ? `${like.title}` : `اعجبنى`}</span>
       </Button>
-      
+      </Tooltip>   
       
       <Button variant="text" size="medium" style={{color:"black"}} >
         <ChatBubbleOutlineOutlinedIcon/>

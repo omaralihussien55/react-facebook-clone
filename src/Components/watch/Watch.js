@@ -10,7 +10,7 @@ const Watch = () => {
     <div className='col-12   col-md-4 mx-auto mb-3'>
         <SidebarWatch/>
     </div>
-    <div className='col-12  col-md-8 mx-auto '>
+    <div className='col-11  col-md-8 mx-auto '>
      <IndexWatch/>
     </div>
     </div>

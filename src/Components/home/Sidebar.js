@@ -20,12 +20,12 @@ const Sidebar = ({display}) => {
             dataSidbar.map((i,idx)=>{
                 return(
                     <li className='p-1 mb-2 link-sidbar' key={idx}>
-                    <a  className='d-flex ' style={{cursor:"pointer"}}>
+                    <Link to={i.to}  className='d-flex ' style={{cursor:"pointer"}}>
                         <div className=''>
                          <img width={30} height={30} src={i.img}  />
                         </div>
                         <div className='mx-3' style={{color:"#050505"}}>{i.title}</div>
-                    </a>
+                    </Link>
              </li>
                 )
             })

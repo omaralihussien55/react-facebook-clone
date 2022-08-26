@@ -1,7 +1,6 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { blue, blueGrey} from '@mui/material/colors'
-import { imgperson } from '../../data/data'
 import { arr } from '../home/Tabbar'
 const Indexfrend = () => {
   return (
@@ -15,7 +14,7 @@ const Indexfrend = () => {
                 if(i.name =="Gamal")return null
                 return(
 
-                <div className='col-12 col-md-6 col-lg-4   mb-2'>
+                <div className='col-12 col-md-6 col-lg-4   mb-3'>
                     <div className=' mx-2 bg-white'>
                          <div className='w-100 h-100'><img className='w-100 h-50' src={i.img} />   </div>
                           <p className='my-2 p-2'>{i.name}</p>

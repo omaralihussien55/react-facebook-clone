@@ -9,7 +9,7 @@ import UploadIcon from '@mui/icons-material/Upload';
 import { imgperson } from '../../data/data'
 import { blueGrey } from '@mui/material/colors';
 import Barpersonal from './Barpersonal';
-import { Avatar, Badge } from '@mui/material';
+import { Avatar } from '@mui/material';
 import { Add } from '@mui/icons-material';
 import EditIcon from '@mui/icons-material/Edit';
 const Head = () => {
@@ -25,7 +25,7 @@ const Head = () => {
     
   return (
     <div className='headPersonal'>
-    <div className='col-10 mx-auto'>
+    <div className='col-12 col-md-10 mx-auto'>
             <div className='cover position-relative' style={{backgroundImage: `url(${imgperson})`}}>
               <div className='position-absolute bg-white' style={{left:"20px",bottom:"30px"}}>
               <Button
@@ -58,7 +58,7 @@ const Head = () => {
 
             <div className='row m-0 ' style={{height:"35vh"}}>
                      <div className='col-md-6 d-flex '>
-                           <div className='position-relative '>
+                           <div className='position-relative'>
                                   <div className='avatar' style={{backgroundImage: `url(${imgperson})`}}>
                                     <div className='badges'>
                                     <CameraAltIcon/>
@@ -97,8 +97,3 @@ const Head = () => {
 }
 
 export default Head
-
-// <div className='parent-avatar mx-auto  col-4 '>
-
-
-// </div>
