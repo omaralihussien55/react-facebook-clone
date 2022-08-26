@@ -16,6 +16,7 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import ReplyOutlinedIcon from '@mui/icons-material/ReplyOutlined';
 import Emojy from './Emojy';
 import { Emogy, post } from '../../data/data';
+import Comment from './Comment';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -31,6 +32,7 @@ const ExpandMore = styled((props) => {
 export default function Posts() {
   const [arry ,setArry] = React.useState(post)
   const [expanded, setExpanded] = React.useState(false);
+  const [comment, setComment] = React.useState(false);
   const [like , setLike ]= React.useState(Emogy[0])
   const [showLike,setShowLike] = React.useState(false)
   const handleExpandClick = () => {
@@ -125,7 +127,7 @@ setLike(findLike)
       </Button>
       </Tooltip>   
       
-      <Button variant="text" size="medium" style={{color:"black"}} >
+      <Button variant="text" size="medium" style={{color:"black"}} onClick={()=> setComment(!comment)} >
         <ChatBubbleOutlineOutlinedIcon/>
       <span className='mx-1'>تعليق</span>
       </Button>
@@ -138,6 +140,8 @@ setLike(findLike)
       </Button>
       
           </div>
+
+          {comment&&<Comment/>}
           
            </Card>
            
